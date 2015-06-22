@@ -28,14 +28,14 @@ public class SceneFadeInOut : MonoBehaviour {
 	
 	void FadeToClear ()
 	{
-		// Lerp the colour of the texture between itself and transparent.
+		// Color of the texture between itself and transparent.
 		guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
 	}
 	
 	
 	void FadeToBlack ()
 	{
-		// Lerp the colour of the texture between itself and black.
+		// Color of the texture between itself and black.
 		guiTexture.color = Color.Lerp(guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
 	}
 	
@@ -48,7 +48,7 @@ public class SceneFadeInOut : MonoBehaviour {
 		// If the texture is almost clear...
 		if(guiTexture.color.a <= 0.05f)
 		{
-			// ... set the colour to clear and disable the GUITexture.
+			// ... set the color to clear and disable the GUITexture.
 			guiTexture.color = Color.clear;
 			guiTexture.enabled = false;
 			
